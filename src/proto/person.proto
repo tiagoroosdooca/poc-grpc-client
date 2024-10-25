@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+message Address {
+    string street = 1;
+    string city = 2;
+    string state = 3;
+    string zip = 4;
+}
+
+message Person {
+    int64 id = 1;
+    string name = 2;
+    string email = 3;
+    string phone = 4;
+    Address address = 5;
+}
+
+message GetPersonRequest {
+    int64 id = 1;
+}
+
+message GetPeopleRequest {
+    optional string name = 1;
+    optional string email = 2;
+    optional int64 idBiggerThan = 3;
+}

@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+import './person.proto';
+
+service RoutesGuide {
+    rpc GetPerson(GetPersonRequest) returns (Person) {}
+    rpc GetPeople(GetPeopleRequest) returns (stream Person) {}
+}
